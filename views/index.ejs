@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Generative AI Prompt</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to a CSS file for styling -->
+</head>
+<body>
+    <div class="container">
+        <h1>Google Generative AI Prompt</h1>
+        
+        <!-- Form to submit the prompt -->
+        <form action="/" method="POST">
+            <label for="prompt">Enter a prompt:</label>
+            <textarea id="prompt" name="prompt" rows="4" required><%= prompt %></textarea>
+            <button type="submit">Generate</button>
+        </form>
+
+        <% if (response) { %> <!-- If there's a response to display -->
+            <h3>Generated Table for Prompt: "<%= prompt %>"</h3>
+            <table>
+                <tr>
+                    <td colspan="10"><b>Generated Data: </b><%= response %></td>
+                </tr>
+            </table>
+        <% } %>
+        
+    </div>
+</body>
+</html>
